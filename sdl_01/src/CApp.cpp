@@ -4,6 +4,7 @@ CApp::CApp()
 {
     Running = true;
     Surf_Display = NULL;
+    Surf_Test = NULL;
 }
 
 int CApp::OnExecute()
@@ -43,6 +44,11 @@ bool CApp::OnInit()
         return false;
     }
 
+    if((Surf_Test = CSurface::OnLoad("img/myimage.bmp")) == NULL)
+    {
+        return false;
+    }
+
     return true;
 }
 
@@ -61,12 +67,17 @@ void CApp::OnLoop()
 
 void CApp::OnCleanup()
 {
+    SDL_FreeSurface(Surf_Test);
+    SDL_FreeSurface(Surf_Display);
     SDL_Quit();
 }
 
 void CApp::OnRender()
 {
+    CSurface::OnDraw(Surf_Display, Surf_Test, 0, 0);
+    CSurface::OnDraw(Surf_Display, Surf_Test, 100, 100, 0, 0, 50, 50);
 
+    SDL_Flip(Surf_Display);
 }
 
 int main(int argc, char* argv[])

@@ -3,6 +3,8 @@
 
 #include <SDL/SDL.h>
 
+#include "CSurface.h"
+
 class CApp
 {
     public:
@@ -17,6 +19,7 @@ class CApp
     private:
         bool Running;
         SDL_Surface* Surf_Display;
+        SDL_Surface* Surf_Test;
 };
 
 #endif // CAPP_H
