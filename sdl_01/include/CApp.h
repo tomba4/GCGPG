@@ -3,15 +3,17 @@
 
 #include <SDL/SDL.h>
 
+#include "CEvent.h"
 #include "CSurface.h"
 
-class CApp
+class CApp : public CEvent
 {
     public:
         CApp();
         int OnExecute();
         bool OnInit();
         void OnEvent(SDL_Event* Event);
+        void OnExit();
         void OnLoop();
         void OnRender();
         void OnCleanup();

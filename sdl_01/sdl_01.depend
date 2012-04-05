@@ -1,13 +1,21 @@
 # depslib dependency file v1.0
-1333573307 source:/home/tomba/workspace-cb/sdl_01/src/CApp.cpp
+1333646136 source:/home/tomba/workspace-cb/sdl_01/src/CApp.cpp
 	"CApp.h"
 
-1333572954 /home/tomba/workspace-cb/sdl_01/include/CApp.h
+1333646098 /home/tomba/workspace-cb/sdl_01/include/CApp.h
 	<SDL/SDL.h>
+	"CEvent.h"
+	"CSurface.h"
 
 1333600493 source:/home/tomba/workspace-cb/sdl_01/src/CSurface.cpp
 	"CSurface.h"
 
 1333600424 /home/tomba/workspace-cb/sdl_01/include/CSurface.h
 	<SDL/SDL.h>
+
+1333645456 /home/tomba/workspace-cb/sdl_01/include/CEvent.h
+	<SDL/SDL.h>
+
+1333645932 source:/home/tomba/workspace-cb/sdl_01/src/CEvent.cpp
+	"CEvent.h"
 
